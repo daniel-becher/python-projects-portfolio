@@ -1,0 +1,3 @@
+Název: Projekt Gama
+Popis: Migrace databáze na cloudové řešení.
+Rozpočet projektu: 7500 USD

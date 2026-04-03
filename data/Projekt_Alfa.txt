@@ -1,0 +1,3 @@
+Název: Projekt Alfa
+Popis: Vývoj interního docházkového systému.
+Rozpočet projektu: 5000 USD

@@ -12,6 +12,6 @@
 * Flexible Currency Support: Converts CZK to any currency available in the CNB daily list (e.g., EUR, USD, GBP, JPY).
 * Data parsing and cleaning (handling decimal commas vs. dots).
 * User-Friendly GUI:
-   * Simple input fields for amount and currency code.
-   * Visual feedback for successful conversions (green text).
-   * Error Handling: Validates if the input is a number and checks if the entered currency code exists (red text alerts).
+  * Simple input fields for amount and currency code.
+  * Visual feedback for successful conversions (green text).
+  * Error Handling: Validates if the input is a number and checks if the entered currency code exists (red text alerts).

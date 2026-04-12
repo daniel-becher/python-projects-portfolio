@@ -19,15 +19,16 @@ def get_exchange_rate():
         data_columns = line.split("|")
         
         if len(data_columns) > 4 and target_currency == data_columns[3]:
+            amount = float(data_columns[2])
             exchange_rate = float(data_columns[4].replace(",", "."))
-            return exchange_rate, target_currency
+            final_rate = exchange_rate / amount
+            return final_rate, target_currency
             
     return None, None
         
 
 def conversion():
     input_value = amount_entry.get()
-
     exchange_rate, code = get_exchange_rate()
 
     if exchange_rate is None:

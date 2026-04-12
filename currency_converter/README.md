@@ -1,6 +1,7 @@
 # Currency Converter (Live CNB Data)
 
 **Description:** A desktop GUI application that converts Czech Koruna (CZK) into various foreign currencies using real-time exchange rates from the Czech National Bank (CNB). Unlike static converters, this tool fetches the latest daily rates directly from the official CNB source every time it runs.
+
 **Core Technologies:** 
  * Python 3
  * Tkinter: For the graphical user interface.

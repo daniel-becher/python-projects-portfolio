@@ -26,8 +26,10 @@ system_message = SystemMessage(content=(
 ))
 
 load_dotenv()
-os.environ["GROQ_API_KEY"]=os.getenv("GROQ_API_KEY")
-path = "Level_6/smart_firm_archiver_Langgraph/data"
+if not os.getenv("GROQ_API_KEY"):
+    raise SystemExit("Chybí GROQ_API_KEY. Vytvoř soubor .env podle .env.example.")
+
+path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
 def setup_vectorstore():
     embeddings = HuggingFaceEmbeddings(model_name= "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
@@ -61,7 +63,7 @@ def get_project_info(question):
 
 @tool
 def calculate_tax(amount):
-    """"
+    """
     Calculate tax only ONCE. If you have the result, present it to the user and END.
     """
     final_price = amount * 1.21
